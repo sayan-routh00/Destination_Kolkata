@@ -1,0 +1,165 @@
+/* styles.css - Favorite Places of Kolkata
+   Light-only desktop stylesheet (dark-mode & responsive breakpoints removed).
+   Keeps navbar, dropdown (checkbox hack), side-drawer (hidden by default), sticky blurred background,
+   card color grading, place cards, hero, gallery, footer, doodles, buttons, forms,
+   next/prev buttons and top button, micro animations.
+*/
+
+:root{
+  --bg:#f6f7fb;
+  --surface:#ffffff;
+  --muted:#676b74;
+  --text:#0f172a;
+  --accent1:#1e3c72; /* deep blue */
+  --accent2:#6a11cb; /* purple */
+  --accent3:#ff7b7b; /* coral */
+  --glass: rgba(255,255,255,0.6);
+  --card-grad: linear-gradient(135deg, rgba(255,255,255,0.75), rgba(187, 184, 218, 0.9));
+  --card-border: rgba(15,23,42,0.1);
+  --shadow: 0 8px 28px rgba(20,30,60,0.06);
+  --radius:14px;
+  --max-width:1120px;
+  --accent-gradient: linear-gradient(90deg,var(--accent1),var(--accent2));
+  --glass-dark: rgba(10,12,20,0.4);
+}
+
+/* Reset & base */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, Poppins, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+body{background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.container{max-width:var(--max-width);margin:28px auto;padding:0 18px}
+a{color:inherit}
+
+/* Sticky blurred background image */
+.bg-sticky{position:fixed;inset:0;z-index:-2;background-image:url('images/Home/HomeBackground.jpg');background-size:cover;background-position:center;filter:blur(3px) saturate(100%);opacity:0.75;pointer-events:none;backdrop-filter: blur(4px);}
+
+/* Header */
+.header{position:sticky;top:14px;z-index:40;padding:10px 0}
+.header .inner{display:flex;align-items:center;justify-content:space-between;gap:18px;max-width:var(--max-width);margin:0 auto;padding:8px 18px;background:linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0.35));border-radius:16px;border:1px solid var(--card-border);box-shadow:var(--shadow);backdrop-filter:blur(6px)}
+.logo{display:flex;align-items:center;gap:12px}
+.logo .mark{width:56px;height:56px;border-radius:12px;display:flex;align-items:center;justify-content:center;background-image:url('images/Home/Logo.jpeg');background-size:cover;background-position:center}
+.logo h1{font-size:18px;margin:0;font-weight:700;letter-spacing:0.2px;padding-top:7px;}
+.logo .tag{font-size:12px;color:var(--muted);margin-top:2px}
+
+/* Nav - Desktop */
+.nav-desktop{display:flex;align-items:center;gap:12px}
+.nav-desktop a{padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:600;color:var(--text);transition:all .18s}
+.nav-desktop a:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(20,30,60,0.06)}
+
+/* Search form */
+.search-form{display:flex;align-items:center;background:rgba(255,255,255,0.7);border-radius:12px;padding:6px;border:1px solid var(--card-border);}
+.search-form input{border:0;background:transparent;padding:6px 8px;width:140px;font-size:14px}
+.search-form .icon-btn{border:0;background:transparent;padding:6px 8px;font-size:14px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:700;background:var(--accent-gradient);color:white;border:0;cursor:pointer}
+.btn.secondary{background:linear-gradient(90deg,#06b6d4,#3b82f6)}
+.btn.primary{background:linear-gradient(90deg,#ff7b7b,#ffbe4a)}
+.btn.ghost{background:transparent;border:1px solid var(--card-border);color:var(--text)}
+.btn:hover{transform:translateY(-4px)}
+
+/* Places dropdown (checkbox hack) */
+.places-dropdown{position:relative}
+.places-dropdown .toggle-input{display:none}
+.places-dropdown .dropdown-list{position:absolute;right:0;top:48px;background:var(--surface);padding:10px;border-radius:12px;min-width:220px;box-shadow:var(--shadow);border:1px solid var(--card-border);display:flex;flex-direction:column;gap:8px;opacity:0;transform:translateY(-6px);pointer-events:none;transition:all .18s}
+.places-dropdown .dropdown-list a{padding:8px;border-radius:8px;text-decoration:none;color:var(--text);font-weight:600}
+.places-dropdown .toggle-input:checked + label + .dropdown-list{opacity:1;transform:translateY(0);pointer-events:auto}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:stretch;margin:26px 0}
+.card-lite{background:var(--card-grad);border-radius:var(--radius);padding:18px;border:1px solid var(--card-border);box-shadow:var(--shadow)}
+.hero-left h2{font-size:28px;margin:0}
+.hero-left .lead{color:var(--muted);line-height:1.6;margin-top:10px}
+.hero-features{margin:12px 0;padding-left:18px;color:var(--muted)}
+.hero-cta{display:flex;gap:10px;margin-top:14px}
+/* .hero-right .hero-image{position:relative;border-radius:12px;overflow:hidden;height:260px}
+.hero-right img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-doodle{position:absolute;inset:auto 0 0 0;height:80px;width:100%}
+.social-strip{display:flex;justify-content:space-around;margin-top:12px} */
+
+/* About */
+.about{margin-top:18px;margin-bottom:18px}
+.about-grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+.social-icons a{display:inline-block;margin-right:8px;padding:8px 10px;border-radius:8px;background:linear-gradient(90deg,#fff6,#fff2);transition: 0.2s ease;color: var(--accent2);}
+.social-btn:hover {transform: translateY(-4px);background: linear-gradient(90deg, var(--accent1), var(--accent2));color: #fff;}
+/* --- MEMBERSHIP PERKS CARDS --- */
+.membership-perks {display: grid;grid-template-columns: repeat(3, 1fr);gap: 14px;margin-top: 12px;}
+.perk-card {background: linear-gradient(135deg, rgba(106,17,203,0.14), rgba(30,60,114,0.12));border-radius: 14px;padding: 16px;border: 1px solid rgba(0,0,0,0.06);box-shadow: 0 8px 22px rgba(20,30,60,0.06);transition: all 0.25s ease;}
+.perk-card:hover {transform: translateY(-4px);box-shadow: 0 12px 30px rgba(20,30,60,0.12);}
+.perk-card h5 {margin: 0 0 8px 0;font-size: 16px;font-weight: 700;color: var(--accent2);}
+.perk-card p {margin: 0;color: var(--muted);}
+
+
+/* Places grid */
+.places-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:12px}
+.place-card img {width:100%;height:160px;object-fit:cover;border-radius:10px;}
+.place-card h3 {margin:10px 0 6px}
+.place-card p {color:var(--muted);font-size:14px}
+.place-card a {text-decoration: none;color: inherit;}
+.place-card a:hover {text-decoration: none;color: var(--accent2);}
+.place-card {transition: transform 0.25s ease, box-shadow 0.25s ease;}
+.place-card:hover {transform: scale(1.04) translateY(-4px);box-shadow: 0 12px 28px rgba(20,30,60,0.12);}
+
+
+/* Gallery cards */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+.photo-card{border-radius:12px;overflow:hidden}
+.photo-card img{display:block;width:100%;height:160px;object-fit:cover}
+.photo-card figcaption{text-align:center;padding:8px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.02));font-weight:600}
+
+.gallery{display: grid;grid-template-columns: repeat(3, 1fr);gap: 14px;}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+.help-card{display:flex;flex-direction:column;gap:8px;background: linear-gradient(135deg, rgba(106,17,203,0.14), rgba(30,60,114,0.12));}
+.help-card h4 {margin: 0 0 8px 0;font-size: 16px;font-weight: 700;color: var(--accent2);}
+
+/* Footer */
+.footer{margin-top:28px;padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.4), rgba(255,255,255,0.2));border:1px solid var(--card-border)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.footer-links a{display:inline-block;margin-right:12px}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.to-top{text-decoration:none}
+.footer-icons a{display:inline-block;margin-right:8px;padding:8px 5px;border-radius:8px;}
+
+/* Place page specific extras */
+.place-hero{display:flex;flex-direction: column; gap:18px;align-items:flex-start}
+.place-hero img{width:100%;height:280px;object-fit:cover;border-radius:12px}
+.details{display:grid;grid-template-columns:2fr 1fr;gap:18px;margin-top:18px}
+.card-section{background:var(--card-grad);padding:16px;border-radius:12px;border:1px solid var(--card-border);box-shadow:var(--shadow)}
+.side-content{display:flex;flex-direction: column; gap:18px;align-items:flex-start}
+.main-content{display:flex;gap:18px;align-items:flex-start}
+
+.meta-list{list-style:none;padding:0;margin:0}
+.meta-list li{padding:8px 0;border-bottom:1px dashed rgba(0,0,0,0.04);color:var(--muted)}
+.meta-list li strong{color:#333}
+
+/* Review form */
+.review-box textarea{width:100%;min-height:120px;padding:12px;border-radius:10px;border:1px solid var(--card-border);background:transparent;color:var(--text)}
+.input{padding:10px;border-radius:8px;border:1px solid var(--card-border);background:transparent}
+
+/* Navigation between place pages */
+.page-nav{display:flex;justify-content:space-between;gap:12px;margin-top:18px}
+.page-nav a{flex:1;text-align:center}
+
+/* Next/Prev and top button floating */
+.next-prev{display:flex;gap:10px}
+.next-prev .btn{flex:1}
+
+/* Scroll to top button (sticky bottom-right) */
+.scroll-top{position:fixed;right:18px;bottom:18px;background:linear-gradient(90deg,#6a11cb,#ff7b7b);color:white;padding:10px 12px;border-radius:999px;box-shadow:0 10px 30px rgba(20,30,60,0.16);z-index:80}
+
+/* Small micro animations */
+.wavy{animation:wavy 6s linear infinite}
+@keyframes wavy{0%{transform:translateX(0)}50%{transform:translateX(6px)}100%{transform:translateX(0)}}
+.doodle-core{animation:pop 4s ease-in-out infinite}
+@keyframes pop{0%{transform:scale(1)}50%{transform:scale(1.06)}100%{transform:scale(1)}}
+
+/* Accessibility focus outlines */
+a:focus,button:focus,input:focus,textarea:focus{outline:3px solid rgba(99,102,241,0.18);outline-offset:3px}
+
+/* Utility */
+.text-muted{color:var(--muted)}
+.kicker{font-weight:700;color:var(--accent2)}
+
+/* End of styles */
