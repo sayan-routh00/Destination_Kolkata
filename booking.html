@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Online Ticket Booking — Destination Kolkata</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Online ticket booking links for top attractions in Kolkata" />
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="header">
+    <div class="inner">
+      <div class="logo">
+        <a href="index.html" class="mark" aria-label="Home logo"></a>
+        <div class="brand"><h1>Destination Kolkata</h1><p class="tag">Book Tickets Online</p></div>
+      </div>
+
+      <!-- Desktop nav -->
+      <nav class="nav-desktop">
+        <a href="index.html">Home</a>
+        <a href="index.html#places">Places</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+
+        <!-- Search form -->
+        <form class="search-form" action="#" method="get" role="search" aria-label="Search site">
+          <input type="search" name="q" placeholder="Search places..." aria-label="Search" />
+          <button class="icon-btn" aria-label="Search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="7"></circle>
+              <line x1="16.65" y1="16.65" x2="21" y2="21"></line>
+            </svg>
+          </button>
+        </form>
+
+        <!-- Sign in button -->
+        <a href="signin.html" class="btn primary" style="color: white;"><b>Sign in</b></a>
+
+        <!-- Places dropdown using checkbox hack -->
+        <div class="places-dropdown">
+          <input type="checkbox" id="places-toggle-2" class="toggle-input" />
+          <label for="places-toggle-2" class="btn secondary">Places
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                style="margin-left:3px;">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </label>
+          <div class="dropdown-list" role="menu" aria-hidden="true">
+            <a href="victoria.html">Victoria Memorial</a>
+            <a href="indian-museum.html">Indian Museum</a>
+            <a href="alipore-zoo.html">Alipore Zoo</a>
+            <a href="science-city.html">Science City</a>
+            <a href="bitm.html">BITM</a>
+            <a href="eco-park.html">Eco Park</a>
+            <a href="#">Howrah Bridge</a>
+            <a href="#">Nicco Park</a>
+            <a href="#">Park Street</a>
+            <a href="#">Marble Palace</a>
+            <a href="#">Prinsep Ghat</a>
+            <a href="#">Jorasanko Thakur Bari</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="card-section">
+      <h2>Official Booking Links</h2>
+      <p class="small text-muted">Here are official ticket booking links for popular Kolkata attractions. Click on a place to go to its ticketing portal.</p>
+
+      <ul class="meta-list" style="margin-top:12px">
+        <li><strong>Victoria Memorial (Museum Galleries & Gardens):</strong> Official site / tickets — <a class="btn" href="https://victoriamemorial-cal.org/" target="_blank" rel="noopener">Victoria Memorial</a></li>
+        <li><strong>Indian Museum:</strong> Online ticketing & visitor info — <a class="btn" href="https://indianmuseumkolkata.org/book-a-ticket/" target="_blank" rel="noopener">Indian Museum Bookings</a></li>
+        <li><strong>Alipore Zoological Garden:</strong> West Bengal Zoo Authority booking — <a class="btn" href="https://wbza.org/onlineticket/eticket/book_ticket" target="_blank" rel="noopener">Alipore Zoo Tickets</a></li>
+        <li><strong>Science City:</strong> Book entry, shows and Space Theatre — <a class="btn" href="https://sciencecitykolkata.org.in/" target="_blank" rel="noopener">Science City Booking</a></li>
+        <li><strong>Birla Industrial & Technological Museum (BITM):</strong> Visitor info and ticketing — <a class="btn" href="https://bitm.gov.in/" target="_blank" rel="noopener">BITM (NCSM)</a></li>
+        <li><strong>Eco Park (Prakriti Tirtha):</strong> Official site / tickets — <a class="btn" href="https://ecoparknewtown.com/" target="_blank" rel="noopener">Eco Park</a></li>
+      </ul>
+
+      <div class="card-section" style="margin-top:24px">
+        <h3>Need Help?</h3>
+        <p class="small text-muted">If a link doesn’t work or you want to book for a special event / group visit, it's best to visit the official site of the attraction directly or contact them via phone / email.</p>
+      </div>
+    </section>
+
+    <!-- Back to top button -->
+    <a href="#top" class="back-to-top" aria-label="Go to top">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none"
+       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+       <path d="M6 15l6-6 6 6"></path>
+      </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand"><strong>Destination Kolkata</strong><p class="small">Visitor guide & ticketing links</p></div>
+        <div class="footer-icons">
+          <a href="#" aria-label="Facebook">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M13 3h4V0h-4c-3.3 0-6 2.7-6 6v3H4v4h3v11h4V13h3l1-4h-4V6c0-1.1.9-2 2-2z"/>
+                </svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.6 0 3 1.4 3 3v10c0 1.6-1.4 3-3 3H7c-1.6 0-3-1.4-3-3V7c0-1.6 1.4-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-3a1 1 0 11-2 0 1 1 0 012 0z"/>
+                </svg>
+          </a>
+          <a href="#" aria-label="X">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.3 2H21l-6.6 7.5L22 22h-6.6l-5.2-6.9L4.5 22H2l7.2-8.2L2 2h6.7l4.7 6.3L18.3 2zm-2 17h1.8L8.2 4H6.3l10 15z"/>
+                </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom"><small>© Destination Kolkata — All booking links point to official or trusted sources.</small></div>
+    </footer>
+  </main>
+</body>
+</html>
